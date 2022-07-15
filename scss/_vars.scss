@@ -1,0 +1,77 @@
+// variables
+$ptj:100%;
+$hv:100vh;
+$wv:100vw;
+$px:500px;
+
+// variables comunes
+* {
+  padding: ($px - 500);
+  margin: ($px - 500);
+  font-family: $generalfonts;
+}
+
+html {
+  font-size: ($ptj - 37.5);
+  height: $ptj;
+}
+
+h1 {
+  font-size: $txth1;
+}
+
+h2 {
+  font-size: $txth2;
+}
+
+h3 {
+  font-size: $txth3;
+}
+
+h4,
+p,
+a {
+  font-size: $txtg;
+}
+
+// mixin
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-column($direction, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+}
+
+@mixin txt($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+// mg
+$bg:('grey-1': #6B757D,
+  'grey-2': #899496,
+  'grey-3':#97B0AD,
+  'green-drop':rgb(9, 134, 9),
+  'black-trans':rgba(24, 24, 24, 0.824),
+  'black-main':rgb(6, 6, 6),
+  'grey-main':rgba(43, 43, 43, 0.244),
+  'green-header-1':#009900,
+  'green-header-2':#006600,
+  'white':rgb(255, 235, 235),
+  'blue':rgb(23, 23, 253),
+  'green-rsl-1':#2cff2c,
+  'green-rsl-2':#288b28,
+);
+$color:('black':#060606,
+  'blue':#003da0,
+  'white':rgb(255, 235, 235),
+  'white-trans':rgba(255, 235, 235, 0.124),
+  'gy':rgb(120, 176, 35),
+  'green':rgb(55, 196, 55),
+  'green-shadow':rgb(16, 49, 0),
+  'yellow':rgb(214, 214, 22), )

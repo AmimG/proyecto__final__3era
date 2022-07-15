@@ -1,0 +1,30 @@
+General
+- Meta autor: Amim Ganaim
+- Meta robots: index y follow
+- H1: usado en la nav como CENTRAL SPORTS
+
+Index
+- Meta description: se agregó el siguiente parrafo "Central Sports es un diario deportivo digital, enfocado en el fútbol, boxeo y tenis. Conocerás las noticias más actualizadas del deporte"
+- Meta keywords: se agregarón las siguientes palabras claves "deportes, diario, diario deportivo, digital, diario digital, futbol, fútbol, tenis, boxeo, madrid, real madrid, atletico de madrid, barcelona, benzema, lewandoski"
+- Title: Central Sports | Noticias deportivas
+
+Resultados
+- Meta description: se agregó el siguiente parrafo "Resutados de los eventos deportivos, enfocado en el fútbol, boxeo y tenis"
+- Meta keywords: se agregarón las siguientes palabras claves "resultados, resultados del día, laliga, la liga, liga española, liga italiana, serie a, liga alemana, liga de alemania, bundesliga, liga de inglaterra, liga inglesa, premier league, liga francesa, liga de francia, ligue one, ligue 1, liga one, liga uno, real madrid, barcelona, atletico de madrid, juve, juventus, inter, inter de milan, milan, bayern, bayer, bayern munchen, dortmund, borusia dortmund, borussia dortmund, borusia, manchester, city, united, machester city, manchester united, man u, man city, liverpool, psg, paris saint germain, monaco, marsella"
+- Title: Resultados | Central Sports
+
+Perfil
+- Meta description: se agregó el siguiente parrafo "Iniciar sesión en Central Sports, para estar al día de las noticias más importantes del mundo del deporte"
+- Meta keywords: se agregarón las siguientes palabras claves "iniciar, inciar sesión, iniciar sesion"
+- Title: Iniciar sesión | Central Sports
+
+Nosotros
+- Meta description: se agregó el siguiente parrafo "Conoce el nacimiento de Central Sports, desde sus origenes hasta su misión y visión"
+- Meta keywords: se agregarón las siguientes palabras claves "nosotros, sobre nosotros, about us, us, informacion, información, nacimiento, informacion de central sports, informacion central sports, sobre central sports, about central sports, mision, misión, vision, visión"
+- Title: About Us | Central Sports
+
+Contacto
+- Meta description: se agregó el siguiente parrafo "Contacta con Central Sports, envianos rumores, estadisticas, noticias. Contacto por trabajo, mejoras, bugs"
+- Meta keywords: se agregarón las siguientes palabras claves "contacto, correo, gmail, outlook, quejas, bugs"
+- Title: Contacto | Central Sports
+
