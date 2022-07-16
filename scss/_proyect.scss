@@ -45,6 +45,7 @@
           font-family: $generalfonts;
           color: map-get($map:$color, $key:'black', );
 
+
           &:hover {
             color: map-get($map:$color, $key:'blue', );
             transition: 300ms;
@@ -59,6 +60,8 @@
 
       a {
         width: ($px - 468);
+        display: flex;
+        align-self: center;
 
         img {
           width: $ptj;
@@ -84,14 +87,35 @@
     @media (max-width: 380px) {
       a {
         h1 {
-          font-size: ($txtg - .5);
+          font-size: ($txtg - .2);
         }
       }
 
       .dis-2 {
         a {
-          width: ($px - 480);
+          margin: ($px - 490);
+        }
+      }
+    }
+
+    @media (max-width: 330px) {
+      .dis-2 {
+        a {
           margin: ($px - 495);
+        }
+      }
+    }
+
+    @media (max-width: 300px) {
+      a {
+        h1 {
+          font-size: ($txtg - .6);
+        }
+      }
+
+      .dis-2 {
+        a {
+          width: ($px - 478);
         }
       }
     }
@@ -118,6 +142,10 @@
       padding-top: ($px - 500);
       padding-bottom: ($px - 500);
 
+      span {
+        display: none;
+      }
+
       ul {
         padding: ($px - 500);
 
@@ -125,19 +153,14 @@
           margin-inline: ($px - 495);
         }
 
-        .lis {
-          min-height: ($px - 440);
-          display: flex;
+        a {
+          color: map-get($map: $color, $key: 'white');
+          padding: ($px - 500);
 
-          a {
-            color: map-get($map: $color, $key: 'white');
-            padding: ($px - 500);
-
-            &:hover {
-              color: map-get($map: $color, $key: 'gy');
-              transition: 500ms;
-              font-weight: 500;
-            }
+          &:hover {
+            color: map-get($map: $color, $key: 'gy');
+            transition: 500ms;
+            font-weight: 500;
           }
         }
 
@@ -146,7 +169,7 @@
           border: map-get($map: $color, $key: 'gy') ($px - 499.5) solid;
           margin-top: ($px - 495);
           padding-block: ($px - 490);
-          border-radius: ($px - 480);
+          border-radius: ($px - 490);
 
           li {
             margin-inline: ($px - 490);
@@ -157,29 +180,41 @@
               }
             }
           }
-
         }
+
       }
     }
 
     @media (max-width: 768px) {
-      min-height: ($px - 460);
-      max-height: ($px - 460);
+      @include flex(flex-start, center);
 
       .navbar {
         padding-top: ($px - 490);
         padding-bottom: ($px - 490);
+        width: $ptj;
 
-        ul {
-          .lis {
-            min-height: ($px - 460);
-            max-height: ($px - 460);
+        button {
+          border: none;
+        }
+
+        li.nav-item {
+          margin-top: ($px - 490);
+
+          a {
+            font-size: $txtg;
           }
         }
       }
+    }
 
-      a {
-        font-size: ($txtg - .5);
+    @media (max-width: 767px) {
+
+      .navbar {
+        span {
+          display: flex;
+          font-size: ($txtg - .2);
+          color: map-get($map: $color, $key: 'gy');
+        }
       }
     }
 
@@ -190,26 +225,23 @@
             margin-inline: ($px - 497.5);
           }
         }
-      }
 
-      .lis {
-        max-height: auto;
-      }
-
-      a {
-        font-size: ($txtg - .6);
+        li.nav-item {
+          a {
+            font-size: ($txtg - .2);
+          }
+        }
       }
     }
 
     @media (max-width: 380px) {
-      a {
-        font-size: ($txtg - .8);
-      }
-    }
+      .navbar {
 
-    @media (max-width: 320px) {
-      a {
-        font-size: ($txtg - 1);
+        li.nav-item {
+          a {
+            font-size: ($txtg - .4);
+          }
+        }
       }
     }
   }
@@ -529,16 +561,10 @@
         text-align: justify;
         color: map-get($map: $color, $key: 'white');
         font-weight: 400;
-        width: ($ptj - 20);
+        width: ($ptj - 10);
         align-self: center;
         font-size: $txtg;
         margin-bottom: ($px - 485);
-      }
-    }
-
-    @media (max-width: 991px) {
-      .section__index h2 {
-        width: ($ptj - 10);
       }
     }
 
@@ -550,14 +576,27 @@
       }
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 430px) {
       .section__index h2 {
-        font-size: ($txtg - .5);
+        font-size: ($txtg);
+        margin-bottom: ($px - 495);
+      }
+    }
+
+    @media (max-width: 320px) {
+      .section__index h2 {
+        font-size: ($txtg - .4);
+      }
+    }
+
+    @media (max-width: 300px) {
+      .section__index h2 {
+        font-size: ($txtg - .6);
       }
     }
 
     .container__carrousel {
-      width: ($ptj - 20);
+      width: ($ptj - 10);
       display: flex;
       align-self: center;
 
@@ -577,6 +616,12 @@
           img {
             width: $ptj;
             border-radius: ($px - 490) ($px - 500) ($px - 500) ($px - 490);
+
+            &:hover {
+              transform: scale(0.995, 0.995);
+              transition: 500ms;
+              cursor: pointer;
+            }
           }
         }
 
@@ -629,8 +674,6 @@
       }
 
       @media (max-width: 991px) {
-        width: ($ptj - 10);
-
         .card .card__div {
           width: ($ptj - 40);
         }
@@ -658,26 +701,6 @@
       }
 
       @media (max-width: 768px) {
-        .card .card-body a {
-          font-size: ($txtg - .6);
-        }
-
-        .card .card-body h3 {
-          font-size: ($txtg - .4);
-        }
-      }
-
-      @media (max-width: 690px) {
-        .card .card-body a {
-          font-size: ($txtg - .8);
-        }
-
-        .card .card-body h3 {
-          font-size: ($txtg - .6);
-        }
-      }
-
-      @media (max-width: 585px) {
         .card {
           @include flex-column(column, none);
           align-self: center;
@@ -697,6 +720,28 @@
             height: ($px - 380);
 
             a {
+              font-size: ($txtg - .4);
+            }
+
+            h3 {
+              font-size: ($txtg - .2);
+            }
+          }
+        }
+      }
+
+      @media (max-width: 585px) {
+
+        .carousel-control-next,
+        .carousel-control-prev {
+          height: ($ptj - 30);
+        }
+      }
+
+      @media (max-width: 430px) {
+        .card {
+          .card-body {
+            a {
               font-size: ($txtg - .6);
             }
 
@@ -704,11 +749,6 @@
               font-size: ($txtg - .4);
             }
           }
-        }
-
-        .carousel-control-next,
-        .carousel-control-prev {
-          height: ($ptj - 30);
         }
       }
 
@@ -718,268 +758,377 @@
         }
       }
 
-      @media (max-width: 380px) {
-        .card .card-body a {
-          font-size: ($txtg - .9);
-        }
+      @media (max-width: 330px) {
+        .card {
+          .card-body {
+            a {
+              font-size: ($txtg - .8);
+            }
 
-        .card .card-body h3 {
-          font-size: ($txtg - .6);
+            h3 {
+              font-size: ($txtg - .6);
+            }
+          }
         }
       }
     }
 
     .container__2 {
       margin-top: ($px - 490);
-      width: ($ptj - 20);
+      width: ($ptj - 10);
       @include flex(space-between, none);
       align-self: center;
-      text-align: center;
 
-      div {
-        width: ($ptj - 78);
+      .div__ner {
+        @include flex(space-between, none);
+        flex-flow: row;
+        width: ($ptj - 52);
 
-        img {
-          width: $ptj;
-          border-radius: ($px - 490);
-          border: map-get($map: $color, $key: 'gy') solid ($px - 499.90);
+        .div__cont {
+          width: ($ptj - 55);
+
+          img {
+            width: $ptj;
+            border-radius: ($px - 490);
+            border: map-get($map: $color, $key: 'gy') solid ($px - 499.90);
+
+            &:hover {
+              transform: scale(0.985, 0.985);
+              transition: 500ms;
+              cursor: pointer;
+            }
+          }
         }
-      }
 
-      a {
-        color: map-get($map: $color, $key: 'white');
-        text-decoration: none;
-        font-size: ($txtg - .2);
+        .a {
+          margin-top: ($px - 492);
+          width: auto;
 
-        &:hover {
-          color: map-get($map: $color, $key: 'gy');
-          font-weight: 500;
-          transition-delay: 300ms;
+          a {
+            color: map-get($map: $color, $key: 'white');
+            text-decoration: none;
+            font-size: ($txtg - .2);
+            line-height: auto;
+            width: $ptj;
+
+            @supports ((-webkit-hyphens:auto) or (hyphens:auto)) {
+              text-align: justify;
+              -webkit-hyphens: auto;
+              hyphens: auto;
+            }
+
+            &:hover {
+              color: map-get($map: $color, $key: 'gy');
+              font-weight: 500;
+              transition-delay: 300ms;
+            }
+          }
         }
       }
 
       @media (max-width: 1330px) {
-        a {
-          font-size: ($txtg - .6);
+        .div__ner {
+          .a {
+            a {
+              font-size: ($txtg - .4);
+            }
+          }
         }
       }
 
       @media (max-width: 1035px) {
-        a {
-          font-size: ($txtg - .8);
+        .div__ner {
+          .a {
+            a {
+              font-size: ($txtg - .6);
+            }
+          }
         }
       }
 
       @media (max-width: 991px) {
-        width: ($ptj - 10);
+        @include flex-column(column, none);
 
-        a {
-          font-size: ($txtg - .9);
+        .div__ner {
+          width: $ptj;
+          margin-bottom: ($px - 495);
+
+          .a {
+            margin-top: ($px - 495);
+            width: auto;
+
+            a {
+              font-size: $txtg;
+            }
+          }
         }
       }
 
+
       @media (max-width: 730px) {
-        a {
-          font-size: ($txtg - 1);
+        .div__ner {
+          .a {
+            a {
+              font-size: ($txtg - .4);
+            }
+          }
         }
       }
 
       @media (max-width: 670px) {
-        a {
-          font-size: ($txtg - 1.1);
-        }
-      }
-
-      @media (max-width: 600px) {
-        a {
-          font-size: ($txtg - 1.15);
+        .div__ner {
+          .a {
+            a {
+              font-size: ($txtg - .6);
+            }
+          }
         }
       }
 
       @media (max-width: 585px) {
         @include flex-column(column, none);
 
-        div {
-          @include flex(space-between, none);
-          width: $ptj;
-          padding-block: ($px - 490);
-          border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
-        }
+        .div__ner {
+          @include flex-column(column, none);
 
-        a {
-          width: ($ptj - 40);
-          align-self: center;
-          margin-inline: ($px - 495);
-          font-size: ($txtg - .5);
-          text-align: justify;
-        }
-      }
+          .div__cont {
+            @include flex(space-between, none);
+            width: $ptj;
+            padding-block: ($px - 490);
+            border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
 
-      @media (max-width: 480px) {
-        a {
-          font-size: ($txtg - .8);
-        }
-      }
+            .div__img {
+              max-width: ($ptj - 60);
+            }
 
-      @media (max-width: 385px) {
-        a {
-          font-size: ($txtg - 1);
-        }
-      }
+            .a {
+              width: ($ptj - 45);
+              margin-inline: ($px - 495);
+              margin-top: ($px - 500);
+              align-self: center;
 
-      @media (max-width: 330px) {
-        a {
-          font-size: ($txtg - 1.2);
-        }
-      }
-
-      @media (max-width: 275px) {
-        a {
-          font-size: ($txtg - 1.3);
-        }
-      }
-    }
-
-    .section__index-w {
-      @extend .section__index;
-      background-color: map-get($map: $bg, $key: 'grey-main');
-    }
-
-    .container__3 {
-      @extend .container__2;
-    }
-
-    .section__index-b {
-      @extend .section__index;
-      background-color: map-get($map: $bg, $key: 'bgmain');
-      border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
-    }
-
-    .section__rsl {
-      @include flex-column(column, none);
-      padding: ($px - 490);
-      margin-bottom: ($px - 460);
-      width: $ptj;
-
-      .rsl__ttl {
-        width: ($ptj - 20);
-        display: flex;
-        align-self: center;
-      }
-
-      .rsl__ttl2 {
-        text-align: justify;
-
-        h2 {
-          color: map-get($map: $color, $key: 'white');
-          font-size: ($txtg - .4);
-          margin-bottom: ($px - 499);
-        }
-
-        span {
-          color: map-get($map: $color, $key: 'white');
-          font-size: ($txtg - .6);
-        }
-      }
-
-      @media (max-width: 991px) {
-        .rsl__ttl {
-          width: ($ptj - 5);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .rsl__ttl {
-          width: $ptj;
-        }
-      }
-
-      @media (max-width: 600px) {
-        .rsl__ttl {
-          width: ($ptj - 5);
-        }
-      }
-
-      @media (max-width: 585px) {
-        .rsl__ttl {
-          width: ($ptj - 10);
-        }
-      }
-    }
-
-    .rsl__div {
-      width: ($ptj - 20);
-      align-self: center;
-      @include flex (space-evenly, none);
-      background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
-      border-radius: ($px - 480);
-
-      .rsl__div2 {
-        @include flex-column (column, none);
-        width: ($ptj - 70);
-        padding: ($px - 490);
-        margin-block: ($px - 490);
-        background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-rsl-1'), map-get($map:$bg, $key:'green-rsl-2'));
-        border-radius: ($px - 480);
-        box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
-
-        .rsl__div3 {
-          @include flex(space-between, center);
-          width: ($ptj - 20);
-          align-self: center;
-          overflow: hidden;
-          margin-block: ($px - 495);
-
-          span {
-            color: map-get($map: $color, $key: 'white');
-            font-weight: 400;
-            font-size: ($txtg - .8);
+              a {
+                font-size: ($txtg - .2);
+              }
+            }
           }
         }
       }
 
-      @media (max-width: 991px) {
+      @media (max-width: 500px) {
+        .div__ner {
+          .div__cont {
+            .a {
+              a {
+                font-size: ($txtg - .4);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 435px) {
+        .div__ner {
+          .div__cont {
+            @include flex-column(column, none);
+            width: $ptj;
+            padding-block: ($px - 490);
+            border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
+
+            .div__img {
+              max-width: $ptj;
+            }
+
+            .a {
+              width: $ptj;
+
+              a {
+                font-size: $txtg;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 385px) {
+        .div__ner {
+          .div__cont {
+            .a {
+              a {
+                font-size: ($txtg - .2);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 330px) {
+        .div__ner {
+          .div__cont {
+            .a {
+              a {
+                font-size: ($txtg - .4);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 275px) {
+        .div__ner {
+          .div__cont {
+            .a {
+              a {
+                font-size: ($txtg - .6);
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  .section__index-w {
+    @extend .section__index;
+    background-color: map-get($map: $bg, $key: 'grey-main');
+  }
+
+  .container__3 {
+    @extend .container__2;
+  }
+
+  .section__index-b {
+    @extend .section__index;
+    background-color: map-get($map: $bg, $key: 'bgmain');
+    border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
+  }
+
+  .section__rsl {
+    @include flex-column(column, none);
+    padding: ($px - 490);
+    margin-bottom: ($px - 460);
+    width: $ptj;
+
+    .rsl__ttl {
+      width: ($ptj - 20);
+      display: flex;
+      align-self: center;
+    }
+
+    .rsl__ttl2 {
+      text-align: justify;
+
+      h2 {
+        color: map-get($map: $color, $key: 'white');
+        font-size: ($txtg - .4);
+        margin-bottom: ($px - 499);
+      }
+
+      span {
+        color: map-get($map: $color, $key: 'white');
+        font-size: ($txtg - .6);
+      }
+    }
+
+    @media (max-width: 991px) {
+      .rsl__ttl {
         width: ($ptj - 5);
       }
+    }
 
-      @media (max-width: 768px) {
+    @media (max-width: 768px) {
+      .rsl__ttl {
         width: $ptj;
-
-        .rsl__div2 {
-          width: ($ptj - 68);
-          padding: ($px - 495);
-          margin-block: ($px - 495);
-        }
-
-        .rsl__div3 {
-          width: $ptj;
-        }
       }
+    }
 
-      @media (max-width: 600px) {
-        width: ($ptj - 2);
-
-        span {
-          text-align: center;
-          align-self: center;
-        }
+    @media (max-width: 600px) {
+      .rsl__ttl {
+        width: ($ptj - 5);
       }
+    }
 
-      @media (max-width: 585px) {
+    @media (max-width: 585px) {
+      .rsl__ttl {
         width: ($ptj - 10);
-        @include flex-column (column, none);
-
-        .rsl__div2 {
-          width: ($ptj - 10);
-          align-self: center;
-        }
-
-        .rsl__div3 {
-          width: ($ptj - 20);
-        }
       }
     }
   }
+
+  .rsl__div {
+    width: ($ptj - 20);
+    align-self: center;
+    @include flex (space-evenly, none);
+    background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
+    border-radius: ($px - 480);
+
+    .rsl__div2 {
+      @include flex-column (column, none);
+      width: ($ptj - 70);
+      padding: ($px - 490);
+      margin-block: ($px - 490);
+      background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-rsl-1'), map-get($map:$bg, $key:'green-rsl-2'));
+      border-radius: ($px - 480);
+      box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+
+      .rsl__div3 {
+        @include flex(space-between, center);
+        width: ($ptj - 20);
+        align-self: center;
+        overflow: hidden;
+        margin-block: ($px - 495);
+
+        span {
+          color: map-get($map: $color, $key: 'white');
+          font-weight: 400;
+          font-size: ($txtg - .8);
+        }
+      }
+    }
+
+    @media (max-width: 991px) {
+      width: ($ptj - 5);
+    }
+
+    @media (max-width: 768px) {
+      width: $ptj;
+
+      .rsl__div2 {
+        width: ($ptj - 68);
+        padding: ($px - 495);
+        margin-block: ($px - 495);
+      }
+
+      .rsl__div3 {
+        width: $ptj;
+      }
+    }
+
+    @media (max-width: 600px) {
+      width: ($ptj - 2);
+
+      span {
+        text-align: center;
+        align-self: center;
+      }
+    }
+
+    @media (max-width: 585px) {
+      width: ($ptj - 10);
+      @include flex-column (column, none);
+
+      .rsl__div2 {
+        width: ($ptj - 10);
+        align-self: center;
+      }
+
+      .rsl__div3 {
+        width: ($ptj - 20);
+      }
+    }
+  }
+
 
   .section__about-br {
     @include flex-column(column, none);
@@ -1021,9 +1170,14 @@
 
         p {
           color: map-get($map: $color, $key: 'white');
-          text-align: justify;
           align-self: center;
           font-size: $txtg;
+
+          @supports ((-webkit-hyphens:auto) or (hyphens:auto)) {
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+          }
         }
       }
 
@@ -1191,9 +1345,9 @@
           font-size: ($txth2 + .5);
           height: ($px - 455);
           margin-block: auto;
-          color: map-get($map: $color, $key: 'gy');
+          color: map-get($map: $color, $key: 'green-shadow');
           font-family: $titlefonts;
-          text-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'green-shadow');
+          text-shadow: ($px - 499) ($px - 499) map-get($map: $color, $key: 'gy');
         }
 
         .span_ {
@@ -1252,11 +1406,11 @@
 
           a {
             text-decoration: none;
-            color: white;
-            font-size: ($txtg - 0.6);
+            color: map-get($map: $color, $key: 'white');
+            font-size: ($txtg - 0.4);
 
             &:hover {
-              color: yellow;
+              color: map-get($map: $color, $key: 'yellow');
               font-weight: 500;
               transition-delay: 250ms;
             }
@@ -1270,13 +1424,28 @@
       padding: ($px - 490);
 
       div {
-        max-height: $px;
-        max-width: ($px + 400);
+        max-width: ($px - 270);
         margin-inline: auto;
         margin-top: ($px - 475);
 
         span {
           font-size: ($txtg - 0.6);
+
+          @supports ((-webkit-hyphens:auto) or (hyphens:auto)) {
+            text-align: justify;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1040px) {
+      .footer__legal {
+        width: 25%;
+
+        div {
+          max-width: ($px - 220);
         }
       }
     }
@@ -1291,6 +1460,7 @@
 
       h4 {
         text-align: center;
+        margin-bottom: auto;
       }
 
       .footer__addrs {
@@ -1344,13 +1514,20 @@
 
         div {
           margin-top: ($px - 500);
+          max-width: ($px - 250);
         }
       }
     }
 
     @media (max-width: 768px) {
+
       .footer__legal {
+        display: flex;
+
         div {
+          margin-bottom: auto;
+          max-width: ($px - 300);
+
           span {
             font-size: ($txtg - 0.8);
           }
@@ -1392,6 +1569,7 @@
 
         ul {
           margin-top: ($px - 500);
+          margin-bottom: auto;
         }
       }
 
@@ -1401,14 +1579,6 @@
         height: $ptj;
         padding: ($px - 480);
         border: none;
-
-        div {
-          max-width: ($px - 200);
-
-          span {
-            font-size: ($txtg - 0.6);
-          }
-        }
       }
     }
 
@@ -1416,11 +1586,11 @@
       @include flex-column(column, none);
 
       h4 {
-        width: ($ptj - 60);
+        width: auto;
         margin-inline: auto;
         align-self: center;
-        margin-bottom: ($px - 495);
-        border-bottom: map-get($map: $color, $key: 'green') solid ($px - 499);
+        margin-bottom: ($px - 490);
+        font-size: ($txth2 - .5);
       }
 
       .footer__addrs {
@@ -1467,24 +1637,12 @@
       .footer__legal {
         div {
           margin-top: ($px - 500);
-          width: auto;
+          max-width: ($px - 290);
 
           span {
-            font-size: ($txtg - .8);
+            font-size: ($txtg - .6);
           }
         }
-      }
-    }
-
-    @media (max-width: 430px) {
-      h4 {
-        width: ($ptj - 50);
-      }
-    }
-
-    @media (max-width: 325px) {
-      h4 {
-        width: ($ptj - 35);
       }
     }
 
@@ -1494,7 +1652,7 @@
           margin-top: ($px - 500);
 
           span {
-            font-size: ($txtg - 1);
+            font-size: ($txtg - .8);
           }
         }
       }

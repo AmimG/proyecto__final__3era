@@ -47,19 +47,14 @@ a {
   align-items: $align;
 }
 
-@mixin txt($size, $color) {
-  font-size: $size;
-  color: $color;
-}
-
 // mg
 $bg:('grey-1': #6B757D,
   'grey-2': #899496,
   'grey-3':#97B0AD,
   'green-drop':rgb(9, 134, 9),
-  'black-trans':rgba(24, 24, 24, 0.824),
-  'black-main':rgb(6, 6, 6),
-  'grey-main':rgba(43, 43, 43, 0.244),
+  'black-trans':rgba(24, 24, 24, 0.637),
+  'black-main':rgb(8, 8, 8),
+  'grey-main':rgba(43, 43, 43, 0.461),
   'green-header-1':#009900,
   'green-header-2':#006600,
   'white':rgb(255, 235, 235),
@@ -70,8 +65,8 @@ $bg:('grey-1': #6B757D,
 $color:('black':#060606,
   'blue':#003da0,
   'white':rgb(255, 235, 235),
-  'white-trans':rgba(255, 235, 235, 0.124),
+  'white-trans':rgba(255, 235, 235, 0.323),
   'gy':rgb(120, 176, 35),
   'green':rgb(55, 196, 55),
-  'green-shadow':rgb(16, 49, 0),
+  'green-shadow':rgb(39, 102, 8),
   'yellow':rgb(214, 214, 22), )
