@@ -127,7 +127,7 @@
     margin-top: ($px - 480);
     min-height: ($px - 440);
     max-height: none;
-    background: map-get($map:$bg, $key: 'black-trans');
+    background: linear-gradient(to bottom, map-get($map:$bg, $key: 'black-trans'), map-get($map:$bg, $key: 'grey-trans'));
 
     .dis-3 {
       width: ($px - 450);
@@ -185,7 +185,7 @@
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 575px) {
       @include flex(flex-start, center);
 
       .navbar {
@@ -204,12 +204,7 @@
             font-size: $txtg;
           }
         }
-      }
-    }
 
-    @media (max-width: 767px) {
-
-      .navbar {
         span {
           display: flex;
           font-size: ($txtg - .2);
@@ -220,6 +215,10 @@
 
     @media (max-width: 480px) {
       .navbar {
+        span {
+          font-size: ($txtg - .4);
+        }
+
         ul {
           .nav-item {
             margin-inline: ($px - 497.5);
@@ -259,15 +258,22 @@
     background-color: map-get($map: $bg, $key: 'black-main');
   }
 
+  .bg-cont {
+    background: linear-gradient(to bottom, map-get($map: $bg, $key: 'black-trans'), map-get($map: $bg, $key: 'black-trans'), map-get($map: $bg, $key: 'black-trans'), map-get($map: $bg, $key: 'grey-trans'));
+
+    #nav2 {
+      background: none;
+    }
+  }
+
   .header {
     @include flex(center, center);
     padding: ($px - 495);
-    margin-block: ($px - 470);
-    background: linear-gradient(to bottom, map-get($map: $bg, $key: 'green-header-1'), map-get($map: $bg, $key: 'green-header-2'));
     color: map-get($map: $color, $key: 'white');
+    margin-top: ($px - 490);
 
     h2 {
-      font-size: ($txth2 + .5);
+      font-size: ($txth2 - .5);
     }
 
     .header__div {
@@ -275,17 +281,10 @@
       text-align: center;
       overflow: hidden;
       width: auto;
-    }
 
-    @media (max-width: 600px) {
-      h2 {
-        font-size: $txth2;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h2 {
-        font-size: ($txth2 - .5);
+      p {
+        font-size: ($txtg - .8);
+        margin-bottom: ($px - 495);
       }
     }
   }
@@ -303,7 +302,6 @@
       .article__ctc {
         @include flex-column (column, none);
         padding: ($px - 490);
-        margin-block: ($px - 490);
 
         h3 {
           text-align: center;
@@ -327,6 +325,7 @@
           align-self: center;
           @include flex-column (column, none);
           background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
+          box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'green-shadow');
           border-radius: ($px - 480);
 
           .form__ctc3 {
@@ -393,6 +392,7 @@
         align-self: center;
         @include flex-column (column, none);
         background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
+        box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'green-shadow');
         border-radius: ($px - 480);
         overflow: hidden;
 
@@ -519,11 +519,18 @@
         }
       }
 
+      @media (max-width: 575px) {
+
+        .form__ctc .form__ctc2,
+        .form__addrs {
+          width: ($ptj - 5);
+        }
+      }
+
       @media (max-width: 480px) {
 
         .form__ctc .form__ctc2,
         .form__addrs {
-          width: ($ptj - 10);
           padding: ($px - 490);
         }
       }
@@ -538,10 +545,6 @@
 
       @media (max-width: 295px) {
         padding: 0;
-
-        .form__ctc .form__ctc2 .form__ctc3 {
-          width: ($ptj - 5);
-        }
       }
     }
   }
@@ -1004,22 +1007,59 @@
     border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
   }
 
+  .head__rsl {
+    text-align: center;
+    width: auto;
+    color: map-get($map: $color, $key: 'white');
+    margin-top: ($px - 490);
+
+    h2 {
+      font-size: $txtg;
+      margin-bottom: ($px - 500);
+      border-bottom: solid ($px - 499) map-get($map: $color, $key: 'white-trans');
+    }
+  }
+
   .section__rsl {
     @include flex-column(column, none);
     padding: ($px - 490);
-    margin-bottom: ($px - 460);
+    margin-bottom: ($px - 490);
     width: $ptj;
 
     .rsl__ttl {
       width: ($ptj - 20);
       display: flex;
       align-self: center;
+      margin-bottom: ($px - 495);
+
+      .rsl__img {
+        width: ($px - 460);
+        display: flex;
+        align-self: center;
+
+        img {
+          width: $ptj;
+        }
+      }
+    }
+
+    .ten__ttl {
+      display: flex;
+
+      h3 {
+        align-self: center;
+      }
+    }
+
+    .box__div {
+      width: ($px - 489);
     }
 
     .rsl__ttl2 {
       text-align: justify;
+      margin-left: ($px - 495);
 
-      h2 {
+      h3 {
         color: map-get($map: $color, $key: 'white');
         font-size: ($txtg - .4);
         margin-bottom: ($px - 499);
@@ -1039,19 +1079,25 @@
 
     @media (max-width: 768px) {
       .rsl__ttl {
-        width: $ptj;
+        width: ($ptj - 50);
       }
     }
 
     @media (max-width: 600px) {
       .rsl__ttl {
+        width: ($ptj - 30);
+      }
+    }
+
+    @media (max-width: 400px) {
+      .rsl__ttl {
         width: ($ptj - 5);
       }
     }
 
-    @media (max-width: 585px) {
+    @media (max-width: 320px) {
       .rsl__ttl {
-        width: ($ptj - 10);
+        width: $ptj;
       }
     }
   }
@@ -1061,6 +1107,7 @@
     align-self: center;
     @include flex (space-evenly, none);
     background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
+    box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'green-shadow');
     border-radius: ($px - 480);
 
     .rsl__div2 {
@@ -1079,6 +1126,14 @@
         overflow: hidden;
         margin-block: ($px - 495);
 
+        img {
+          width: ($px - 468);
+        }
+
+        .ten {
+          margin-inline: ($px - 498);
+        }
+
         span {
           color: map-get($map: $color, $key: 'white');
           font-weight: 400;
@@ -1091,31 +1146,9 @@
       width: ($ptj - 5);
     }
 
+
     @media (max-width: 768px) {
-      width: $ptj;
-
-      .rsl__div2 {
-        width: ($ptj - 68);
-        padding: ($px - 495);
-        margin-block: ($px - 495);
-      }
-
-      .rsl__div3 {
-        width: $ptj;
-      }
-    }
-
-    @media (max-width: 600px) {
-      width: ($ptj - 2);
-
-      span {
-        text-align: center;
-        align-self: center;
-      }
-    }
-
-    @media (max-width: 585px) {
-      width: ($ptj - 10);
+      width: ($ptj - 50);
       @include flex-column (column, none);
 
       .rsl__div2 {
@@ -1125,6 +1158,27 @@
 
       .rsl__div3 {
         width: ($ptj - 20);
+      }
+
+      span {
+        text-align: center;
+        align-self: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      width: ($ptj - 30);
+    }
+
+    @media (max-width: 400px) {
+      width: ($ptj - 5);
+    }
+
+    @media (max-width: 320px) {
+      width: $ptj;
+
+      .rsl__div2 {
+        padding: ($px - 498);
       }
     }
   }
@@ -1166,7 +1220,7 @@
 
       .div__p {
         padding-inline: ($px - 480);
-        background-color: map-get($map: $bg, $key: 'grey-main');
+        background-color: map-get($map: $bg, $key: 'black-trans');
 
         p {
           color: map-get($map: $color, $key: 'white');
@@ -1454,8 +1508,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-template-areas:
-        "addrs redes redes"
+      grid-template-areas: "addrs redes redes"
         "addrs fnav legal";
 
       h4 {
@@ -1469,7 +1522,7 @@
         grid-area: addrs;
         width: $ptj;
         height: $ptj;
-        border-right: map-get($map: $color, $key: 'green') solid ($px - 499);
+        border-right: map-get($map: $color, $key: 'gy') solid ($px - 499);
       }
 
       .footer__redes {
@@ -1478,7 +1531,7 @@
         margin-inline: auto;
         display: flex;
         flex-flow: wrap;
-        border-bottom: map-get($map: $color, $key: 'green') solid ($px - 499);
+        border-bottom: map-get($map: $color, $key: 'gy') solid ($px - 499);
         border-right: none;
 
         .div__redes {
@@ -1539,12 +1592,11 @@
       padding-top: ($px - 500);
       padding-bottom: ($px - 500);
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "addrs fnav"
+      grid-template-areas: "addrs fnav"
         "redes legal";
 
       .footer__addrs {
-        border-right: map-get($map: $color, $key: 'green') solid ($px - 499);
+        border-right: map-get($map: $color, $key: 'gy') solid ($px - 499);
         height: $ptj;
       }
 
