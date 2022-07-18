@@ -271,6 +271,7 @@
     padding: ($px - 495);
     color: map-get($map: $color, $key: 'white');
     margin-top: ($px - 490);
+    border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
 
     h2 {
       font-size: ($txth2 - .5);
@@ -285,266 +286,332 @@
       p {
         font-size: ($txtg - .8);
         margin-bottom: ($px - 495);
+        max-width: ($px - 180);
       }
     }
   }
 
   .main__ctc {
     width: auto;
-    @include flex(center, center);
-    margin-bottom: ($px - 470);
+    @include flex-column(column, center);
+    margin-top: ($px - 490);
+    background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
 
     .section__ctc {
       width: $ptj;
-      @include flex-column (column, none);
+      @include flex(space-between, none);
       padding: ($px - 490);
 
       .article__ctc {
         @include flex-column (column, none);
+        width: ($ptj - 50);
         padding: ($px - 490);
-
-        h3 {
-          text-align: center;
-          align-self: center;
-          margin-bottom: ($px - 490);
-          font-weight: 600;
-          color: map-get($map: $color, $key: 'white');
-          font-weight: 400;
-          width: ($ptj - 80);
-        }
       }
 
       .form__ctc {
         width: $ptj;
         align-self: center;
-        @include flex-column (column, none);
 
         .form__ctc2 {
-          width: ($ptj - 60);
-          padding: ($px - 480);
+          width: $ptj;
           align-self: center;
-          @include flex-column (column, none);
-          background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
-          box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'green-shadow');
+          @include flex(space-between, none);
+          flex-flow: wrap;
           border-radius: ($px - 480);
 
           .form__ctc3 {
             align-self: center;
-            width: ($ptj - 30);
+            width: ($ptj - 52);
             @include flex-column (column, none);
             color: map-get($map: $color, $key: 'white');
             font-weight: 400;
           }
 
           label {
-            font-size: ($txtg - .5);
+            font-size: ($txtg - .2);
             margin-bottom: ($px - 495);
           }
 
           input {
-            box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
-            margin-bottom: ($px - 490);
+            font-size: ($txtg - .5);
             border: none;
-            border-radius: ($px - 480);
+            height: ($px - 480);
+            margin-bottom: ($px - 490);
+            border-radius: ($px - 495);
+            box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+          }
+
+          .form__ctc4 {
+            @extend .form__ctc3;
+            width: $ptj;
           }
 
           textarea {
             @extend input;
-            border-radius: ($px - 500);
-            max-width: $ptj;
-            min-width: $ptj;
-            max-height: ($ptj - 20);
-            min-height: ($ptj - 40);
-          }
-
-          .form__button {
-            @include flex(center, center);
-
-            button {
-              @extend input;
-              margin-bottom: ($px - 500);
-              font-size: ($txtg - .5);
-              height: ($px - 475);
-              background-color: map-get($map: $bg, $key: 'white');
-
-              &:hover {
-                background-color: map-get($map: $bg, $key: 'blue');
-                transition: 300ms;
-              }
-
-              span {
-                margin: ($px - 475);
-
-                &:hover {
-                  color: map-get($map: $bg, $key: 'white');
-                  transition: 300ms;
-                }
-              }
-            }
-
+            border-radius: ($px - 495);
+            width: $ptj;
+            height: auto;
           }
         }
       }
 
       .form__addrs {
-        width: ($ptj - 60);
-        padding: ($px - 480);
+        width: $ptj;
         align-self: center;
         @include flex-column (column, none);
-        background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
-        box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'green-shadow');
-        border-radius: ($px - 480);
         overflow: hidden;
 
         .form__addrs2 {
           width: $ptj;
-          @include flex-column (column, none);
           box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
-          border-radius: ($px - 480);
+          border-radius: ($px - 495);
 
           iframe {
-            border-radius: ($px - 480);
+            width: $ptj;
+            border-radius: ($px - 495);
           }
         }
       }
 
-      .form__perfil {
-        @extend .form__addrs;
-        width: ($ptj - 65);
+      .form__button {
+        @include flex(center, center);
+        width: $ptj;
 
-        .form__img {
-          text-align: center;
-          margin-bottom: ($px - 490);
-        }
+        button {
+          font-size: ($txtg - .5);
+          border: none;
+          border-radius: ($px - 490);
+          margin-bottom: ($px - 500);
+          font-size: ($txtg - .5);
+          height: ($px - 475);
+          box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+          background-color: map-get($map: $bg, $key: 'white');
 
-        .form__perfil2 {
-          width: ($ptj - 30);
-          align-self: center;
-          @include flex-column (column, none);
-          color: map-get($map: $color, $key: 'white');
-          font-weight: 400;
-          margin-bottom: ($px - 490);
-          margin-top: ($px - 480);
-
-          label {
-            text-align: justify;
-            font-size: ($txtg - .5);
-            margin-bottom: ($px - 495);
+          &:hover {
+            background-color: map-get($map: $bg, $key: 'blue');
+            transition: 300ms;
           }
 
-          input {
-            box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
-            margin-bottom: ($px - 490);
-            border: none;
-            border-radius: ($px - 480);
-          }
-
-          .form__checkbox {
-            display: flex;
-
-            input {
-              margin-right: ($px - 495);
-            }
-          }
-        }
-
-        .form__button {
-          display: flex;
-          justify-content: center;
-
-          button {
-            font-size: 1.5rem;
-            box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
-            height: ($px - 475);
-            border: none;
-            border-radius: ($px - 480);
-            background-color: map-get($map: $bg, $key: 'white');
+          span {
+            margin: ($px - 475);
 
             &:hover {
-              color: map-get($map: $bg, $key: 'blue');
+              color: map-get($map: $bg, $key: 'white');
               transition: 300ms;
             }
+          }
+        }
+      }
 
-            span {
-              margin: ($px - 475);
+      .form__pf {
+        width: $ptj;
+        @include flex (center, none);
+        margin-block: ($px - 490);
 
-              &:hover {
-                color: map-get($map: $bg, $key: 'white');
-                transition: 300ms;
+        .form__perfil {
+          width: ($ptj - 70);
+          padding-block: ($px - 495);
+          @include flex-column (column, none);
+          align-self: center;
+          overflow: hidden;
+
+          .form__img {
+            text-align: center;
+            margin-bottom: ($px - 490);
+          }
+
+          .form__perfil2 {
+            width: ($ptj - 30);
+            align-self: center;
+            @include flex-column (column, none);
+            justify-content: center;
+            color: map-get($map: $color, $key: 'white');
+            font-weight: 400;
+            margin-block: ($px - 490);
+
+            label {
+              text-align: justify;
+              font-size: ($txtg - .5);
+              margin-bottom: ($px - 495);
+            }
+
+            input {
+              font-size: ($txtg - .5);
+              border: none;
+              height: ($px - 485);
+              margin-bottom: ($px - 490);
+              border-radius: ($px - 495);
+              box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+            }
+
+            .form__checkbox {
+              display: flex;
+              flex-direction: row;
+
+              input {
+                margin-top: ($px - 497.2);
+                margin-bottom: ($px - $px);
+                border-radius: ($px - 495);
+                box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+                margin-right: ($px - 495);
+              }
+
+              label {
+                margin-bottom: ($px - $px);
               }
             }
           }
         }
       }
+    }
 
-      @media (max-width: 1100px) {
-        .article__ctc h3 {
-          width: ($ptj - 60);
-        }
+    .ctc__redes {
+      width: $ptj;
+      @include flex(space-between, none);
+      margin-block: ($px - 490);
+      overflow-x: hidden;
 
-        .form__ctc .form__ctc2,
-        .form__addrs {
-          width: ($ptj - 50);
-        }
-      }
+      .ctc__redes2 {
+        width: ($ptj - 50);
 
-      @media (max-width: 991px) {
-        .article__ctc h3 {
-          width: auto;
-        }
+        a {
+          text-decoration: none;
+          margin-inline: ($px - 480);
 
-        .form__ctc .form__ctc2,
-        .form__addrs {
-          width: ($ptj - 40);
+          img {
+            width: ($px - 470);
+          }
         }
       }
+    }
 
-      @media (max-width: 768px) {
-
-        .form__ctc .form__ctc2,
-        .form__addrs {
-          width: ($ptj - 15);
+    @media (max-width: 991px) {
+      .section__ctc {
+        .form__pf {
+          .form__perfil {
+            width: ($ptj - 60);
+          }
         }
+      }
+    }
 
-        .form__ctc .form__ctc2 .form__ctc3 {
+    @media (max-width: 768px) {
+      .section__ctc {
+        width: $ptj;
+        @include flex-column(column, none);
+        justify-content: center;
+        padding: ($px - 490);
+
+        .article__ctc {
           width: ($ptj - 20);
+          align-self: center;
+
+          .form__ctc {
+            align-self: center;
+          }
+        }
+
+        .form__pf {
+          .form__perfil {
+            width: ($ptj - 50);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section__ctc {
+
+        .article__ctc {
+          width: ($ptj - 10);
+          align-self: center;
+        }
+
+        .form__pf {
+          .form__perfil {
+            width: ($ptj - 30);
+          }
         }
       }
 
-      @media (max-width: 600px) {
-
-        .form__ctc .form__ctc2,
-        .form__addrs {
-          width: ($ptj - 20);
+      .ctc__redes {
+        .ctc__redes2 {
+          a {
+            margin-inline: ($px - 490);
+          }
         }
       }
+    }
 
-      @media (max-width: 575px) {
+    @media (max-width: 480px) {
+      .section__ctc {
+        padding: ($px - 495);
 
-        .form__ctc .form__ctc2,
-        .form__addrs {
-          width: ($ptj - 5);
-        }
-      }
-
-      @media (max-width: 480px) {
-
-        .form__ctc .form__ctc2,
-        .form__addrs {
-          padding: ($px - 490);
-        }
-      }
-
-      @media (max-width: 380px) {
-
-        .form__ctc .form__ctc2,
-        .form__addrs {
+        .article__ctc {
           width: $ptj;
         }
+
+        .form__pf {
+          .form__perfil {
+            width: ($ptj - 20);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 380px) {
+      .section__ctc {
+        .article__ctc {
+          padding: ($px - 495);
+
+          .form__ctc2 {
+            @include flex-column(column, none);
+
+            .form__ctc3 {
+              width: $ptj;
+            }
+          }
+        }
+
+        .form__pf {
+          .form__perfil {
+            width: ($ptj - 10);
+          }
+        }
       }
 
-      @media (max-width: 295px) {
-        padding: 0;
+      .ctc__redes {
+        .ctc__redes2 {
+          a {
+            margin-inline: ($px - 495);
+
+            img {
+              width: ($px - 475);
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 300px) {
+      .section__ctc {
+        .form__pf {
+          .form__perfil {
+            width: $ptj;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 260px) {
+      .ctc__redes {
+        .ctc__redes2 {
+          a {
+            img {
+              width: ($px - 478);
+            }
+          }
+        }
       }
     }
   }

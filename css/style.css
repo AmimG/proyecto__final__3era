@@ -179,7 +179,8 @@ a {
     align-items: center;
     padding: 5px;
     color: #ffebeb;
-    margin-top: 10px; }
+    margin-top: 10px;
+    border-bottom: rgba(255, 235, 235, 0.323) 0.01px solid; }
     #body .header h2 {
       font-size: 2.5rem; }
     #body .header .header__div {
@@ -189,183 +190,215 @@ a {
       width: auto; }
       #body .header .header__div p {
         font-size: 1.2rem;
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        max-width: 320px; }
   #body .main__ctc {
     width: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 30px; }
+    margin-top: 10px;
+    background: linear-gradient(to bottom, #02c8029f, #074f07a9); }
     #body .main__ctc .section__ctc {
       width: 100%;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: none;
       padding: 10px; }
       #body .main__ctc .section__ctc .article__ctc {
         display: flex;
         flex-direction: column;
         align-items: none;
+        width: 50%;
         padding: 10px; }
-        #body .main__ctc .section__ctc .article__ctc h3 {
-          text-align: center;
-          align-self: center;
-          margin-bottom: 10px;
-          font-weight: 600;
-          color: #ffebeb;
-          font-weight: 400;
-          width: 20%; }
       #body .main__ctc .section__ctc .form__ctc {
         width: 100%;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        align-items: none; }
+        align-self: center; }
         #body .main__ctc .section__ctc .form__ctc .form__ctc2 {
-          width: 40%;
-          padding: 20px;
+          width: 100%;
           align-self: center;
           display: flex;
-          flex-direction: column;
+          justify-content: space-between;
           align-items: none;
-          background: linear-gradient(to bottom, #02c8029f, #074f07a9);
-          box-shadow: 2px 2px #276608;
+          flex-flow: wrap;
           border-radius: 20px; }
-          #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__ctc3 {
+          #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__ctc3, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__ctc4 {
             align-self: center;
-            width: 70%;
+            width: 48%;
             display: flex;
             flex-direction: column;
             align-items: none;
             color: #ffebeb;
             font-weight: 400; }
           #body .main__ctc .section__ctc .form__ctc .form__ctc2 label {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 5px; }
-          #body .main__ctc .section__ctc .form__ctc .form__ctc2 input, #body .main__ctc .section__ctc .form__ctc .form__ctc2 textarea, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button button {
-            box-shadow: 3px 3px #060606;
-            margin-bottom: 10px;
+          #body .main__ctc .section__ctc .form__ctc .form__ctc2 input, #body .main__ctc .section__ctc .form__ctc .form__ctc2 textarea {
+            font-size: 1.5rem;
             border: none;
-            border-radius: 20px; }
+            height: 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 3px 3px #060606; }
+          #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__ctc4 {
+            width: 100%; }
           #body .main__ctc .section__ctc .form__ctc .form__ctc2 textarea {
-            border-radius: 0px;
-            max-width: 100%;
-            min-width: 100%;
-            max-height: 80%;
-            min-height: 60%; }
-          #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button {
-            display: flex;
-            justify-content: center;
-            align-items: center; }
-            #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button button {
-              margin-bottom: 0px;
-              font-size: 1.5rem;
-              height: 25px;
-              background-color: #ffebeb; }
-              #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button button:hover {
-                background-color: #1717fd;
-                transition: 300ms; }
-              #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button button span {
-                margin: 25px; }
-                #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button button span:hover {
-                  color: #ffebeb;
-                  transition: 300ms; }
-      #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
-        width: 40%;
-        padding: 20px;
+            border-radius: 5px;
+            width: 100%;
+            height: auto; }
+      #body .main__ctc .section__ctc .form__addrs {
+        width: 100%;
         align-self: center;
         display: flex;
         flex-direction: column;
         align-items: none;
-        background: linear-gradient(to bottom, #02c8029f, #074f07a9);
-        box-shadow: 2px 2px #276608;
-        border-radius: 20px;
         overflow: hidden; }
-        #body .main__ctc .section__ctc .form__addrs .form__addrs2, #body .main__ctc .section__ctc .form__perfil .form__addrs2 {
+        #body .main__ctc .section__ctc .form__addrs .form__addrs2 {
           width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: none;
           box-shadow: 3px 3px #060606;
-          border-radius: 20px; }
-          #body .main__ctc .section__ctc .form__addrs .form__addrs2 iframe, #body .main__ctc .section__ctc .form__perfil .form__addrs2 iframe {
-            border-radius: 20px; }
-      #body .main__ctc .section__ctc .form__perfil {
-        width: 35%; }
-        #body .main__ctc .section__ctc .form__perfil .form__img {
-          text-align: center;
-          margin-bottom: 10px; }
-        #body .main__ctc .section__ctc .form__perfil .form__perfil2 {
-          width: 70%;
-          align-self: center;
+          border-radius: 5px; }
+          #body .main__ctc .section__ctc .form__addrs .form__addrs2 iframe {
+            width: 100%;
+            border-radius: 5px; }
+      #body .main__ctc .section__ctc .form__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; }
+        #body .main__ctc .section__ctc .form__button button {
+          font-size: 1.5rem;
+          border: none;
+          border-radius: 10px;
+          margin-bottom: 0px;
+          font-size: 1.5rem;
+          height: 25px;
+          box-shadow: 3px 3px #060606;
+          background-color: #ffebeb; }
+          #body .main__ctc .section__ctc .form__button button:hover {
+            background-color: #1717fd;
+            transition: 300ms; }
+          #body .main__ctc .section__ctc .form__button button span {
+            margin: 25px; }
+            #body .main__ctc .section__ctc .form__button button span:hover {
+              color: #ffebeb;
+              transition: 300ms; }
+      #body .main__ctc .section__ctc .form__pf {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: none;
+        margin-block: 10px; }
+        #body .main__ctc .section__ctc .form__pf .form__perfil {
+          width: 30%;
+          padding-block: 5px;
           display: flex;
           flex-direction: column;
           align-items: none;
-          color: #ffebeb;
-          font-weight: 400;
-          margin-bottom: 10px;
-          margin-top: 20px; }
-          #body .main__ctc .section__ctc .form__perfil .form__perfil2 label {
-            text-align: justify;
-            font-size: 1.5rem;
-            margin-bottom: 5px; }
-          #body .main__ctc .section__ctc .form__perfil .form__perfil2 input, #body .main__ctc .section__ctc .form__perfil .form__perfil2 .form__ctc .form__ctc2 textarea, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__perfil .form__perfil2 textarea, #body .main__ctc .section__ctc .form__perfil .form__perfil2 .form__ctc .form__ctc2 .form__button button, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button .form__perfil .form__perfil2 button {
-            box-shadow: 3px 3px #060606;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 20px; }
-          #body .main__ctc .section__ctc .form__perfil .form__perfil2 .form__checkbox {
-            display: flex; }
-            #body .main__ctc .section__ctc .form__perfil .form__perfil2 .form__checkbox input, #body .main__ctc .section__ctc .form__perfil .form__perfil2 .form__checkbox .form__ctc .form__ctc2 textarea, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__perfil .form__perfil2 .form__checkbox textarea, #body .main__ctc .section__ctc .form__perfil .form__perfil2 .form__checkbox .form__ctc .form__ctc2 .form__button button, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__button .form__perfil .form__perfil2 .form__checkbox button {
-              margin-right: 5px; }
-        #body .main__ctc .section__ctc .form__perfil .form__button {
-          display: flex;
-          justify-content: center; }
-          #body .main__ctc .section__ctc .form__perfil .form__button button {
-            font-size: 1.5rem;
-            box-shadow: 3px 3px #060606;
-            height: 25px;
-            border: none;
-            border-radius: 20px;
-            background-color: #ffebeb; }
-            #body .main__ctc .section__ctc .form__perfil .form__button button:hover {
-              color: #1717fd;
-              transition: 300ms; }
-            #body .main__ctc .section__ctc .form__perfil .form__button button span {
-              margin: 25px; }
-              #body .main__ctc .section__ctc .form__perfil .form__button button span:hover {
-                color: #ffebeb;
-                transition: 300ms; }
-      @media (max-width: 1100px) {
-        #body .main__ctc .section__ctc .article__ctc h3 {
-          width: 40%; }
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2, #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
+          align-self: center;
+          overflow: hidden; }
+          #body .main__ctc .section__ctc .form__pf .form__perfil .form__img {
+            text-align: center;
+            margin-bottom: 10px; }
+          #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 {
+            width: 70%;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: none;
+            justify-content: center;
+            color: #ffebeb;
+            font-weight: 400;
+            margin-block: 10px; }
+            #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 label {
+              text-align: justify;
+              font-size: 1.5rem;
+              margin-bottom: 5px; }
+            #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 input, #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 .form__ctc .form__ctc2 textarea, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__pf .form__perfil .form__perfil2 textarea {
+              font-size: 1.5rem;
+              border: none;
+              height: 15px;
+              margin-bottom: 10px;
+              border-radius: 5px;
+              box-shadow: 3px 3px #060606; }
+            #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 .form__checkbox {
+              display: flex;
+              flex-direction: row; }
+              #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 .form__checkbox input, #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 .form__checkbox .form__ctc .form__ctc2 textarea, #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__pf .form__perfil .form__perfil2 .form__checkbox textarea {
+                margin-top: 2.8px;
+                margin-bottom: 0px;
+                border-radius: 5px;
+                box-shadow: 3px 3px #060606;
+                margin-right: 5px; }
+              #body .main__ctc .section__ctc .form__pf .form__perfil .form__perfil2 .form__checkbox label {
+                margin-bottom: 0px; }
+    #body .main__ctc .ctc__redes {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: none;
+      margin-block: 10px;
+      overflow-x: hidden; }
+      #body .main__ctc .ctc__redes .ctc__redes2 {
+        width: 50%; }
+        #body .main__ctc .ctc__redes .ctc__redes2 a {
+          text-decoration: none;
+          margin-inline: 20px; }
+          #body .main__ctc .ctc__redes .ctc__redes2 a img {
+            width: 30px; }
+    @media (max-width: 991px) {
+      #body .main__ctc .section__ctc .form__pf .form__perfil {
+        width: 40%; } }
+    @media (max-width: 768px) {
+      #body .main__ctc .section__ctc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: none;
+        justify-content: center;
+        padding: 10px; }
+        #body .main__ctc .section__ctc .article__ctc {
+          width: 80%;
+          align-self: center; }
+          #body .main__ctc .section__ctc .article__ctc .form__ctc {
+            align-self: center; }
+        #body .main__ctc .section__ctc .form__pf .form__perfil {
           width: 50%; } }
-      @media (max-width: 991px) {
-        #body .main__ctc .section__ctc .article__ctc h3 {
-          width: auto; }
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2, #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
-          width: 60%; } }
-      @media (max-width: 768px) {
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2, #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
-          width: 85%; }
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2 .form__ctc3 {
+    @media (max-width: 600px) {
+      #body .main__ctc .section__ctc .article__ctc {
+        width: 90%;
+        align-self: center; }
+      #body .main__ctc .section__ctc .form__pf .form__perfil {
+        width: 70%; }
+      #body .main__ctc .ctc__redes .ctc__redes2 a {
+        margin-inline: 10px; } }
+    @media (max-width: 480px) {
+      #body .main__ctc .section__ctc {
+        padding: 5px; }
+        #body .main__ctc .section__ctc .article__ctc {
+          width: 100%; }
+        #body .main__ctc .section__ctc .form__pf .form__perfil {
           width: 80%; } }
-      @media (max-width: 600px) {
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2, #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
-          width: 80%; } }
-      @media (max-width: 575px) {
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2, #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
-          width: 95%; } }
-      @media (max-width: 480px) {
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2, #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
-          padding: 10px; } }
-      @media (max-width: 380px) {
-        #body .main__ctc .section__ctc .form__ctc .form__ctc2, #body .main__ctc .section__ctc .form__addrs, #body .main__ctc .section__ctc .form__perfil {
-          width: 100%; } }
-      @media (max-width: 295px) {
-        #body .main__ctc .section__ctc {
-          padding: 0; } }
+    @media (max-width: 380px) {
+      #body .main__ctc .section__ctc .article__ctc {
+        padding: 5px; }
+        #body .main__ctc .section__ctc .article__ctc .form__ctc2 {
+          display: flex;
+          flex-direction: column;
+          align-items: none; }
+          #body .main__ctc .section__ctc .article__ctc .form__ctc2 .form__ctc3, #body .main__ctc .section__ctc .article__ctc .form__ctc .form__ctc2 .form__ctc4, #body .main__ctc .section__ctc .form__ctc .article__ctc .form__ctc2 .form__ctc4 {
+            width: 100%; }
+      #body .main__ctc .section__ctc .form__pf .form__perfil {
+        width: 90%; }
+      #body .main__ctc .ctc__redes .ctc__redes2 a {
+        margin-inline: 5px; }
+        #body .main__ctc .ctc__redes .ctc__redes2 a img {
+          width: 25px; } }
+    @media (max-width: 300px) {
+      #body .main__ctc .section__ctc .form__pf .form__perfil {
+        width: 100%; } }
+    @media (max-width: 260px) {
+      #body .main__ctc .ctc__redes .ctc__redes2 a img {
+        width: 22px; } }
   #body .bg__main {
     display: flex;
     flex-direction: column;
