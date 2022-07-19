@@ -2,6 +2,7 @@
 #body {
   @include flex-column(column, center);
   background-color: map-get($map: $bg, $key: 'black-main');
+  min-height: $hv;
 
   #nav {
     @include flex(space-between, center);
@@ -250,10 +251,6 @@
     background-size: $ptj;
   }
 
-  .bg__vh {
-    min-height: $hv;
-  }
-
   .bg__main-b {
     background-color: map-get($map: $bg, $key: 'black-main');
   }
@@ -268,6 +265,7 @@
 
   .header {
     @include flex(center, center);
+    width: $ptj;
     padding: ($px - 495);
     color: map-get($map: $color, $key: 'white');
     margin-top: ($px - 490);
@@ -292,18 +290,18 @@
   }
 
   .main__ctc {
-    width: auto;
+    width: $ptj;
     @include flex-column(column, center);
     margin-top: ($px - 490);
     background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
 
     .section__ctc {
       width: $ptj;
-      @include flex(space-between, none);
+      @include flex(space-between, center);
       padding: ($px - 490);
 
       .article__ctc {
-        @include flex-column (column, none);
+        @include flex-column (column, center);
         width: ($ptj - 50);
         padding: ($px - 490);
       }
@@ -314,21 +312,19 @@
 
         .form__ctc2 {
           width: $ptj;
-          align-self: center;
-          @include flex(space-between, none);
+          @include flex(space-between, center);
           flex-flow: wrap;
           border-radius: ($px - 480);
 
           .form__ctc3 {
-            align-self: center;
             width: ($ptj - 52);
-            @include flex-column (column, none);
+            @include flex-column (column, center);
             color: map-get($map: $color, $key: 'white');
             font-weight: 400;
           }
 
           label {
-            font-size: ($txtg - .2);
+            font-size: ($txtg - .4);
             margin-bottom: ($px - 495);
           }
 
@@ -339,6 +335,7 @@
             margin-bottom: ($px - 490);
             border-radius: ($px - 495);
             box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+            -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
           }
 
           .form__ctc4 {
@@ -357,13 +354,13 @@
 
       .form__addrs {
         width: $ptj;
-        align-self: center;
-        @include flex-column (column, none);
+        @include flex-column (column, center);
         overflow: hidden;
 
         .form__addrs2 {
           width: $ptj;
           box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+          -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
           border-radius: ($px - 495);
 
           iframe {
@@ -378,25 +375,26 @@
         width: $ptj;
 
         button {
-          font-size: ($txtg - .5);
-          border: none;
+          width: ($px - 300);
+          height: ($px - 470);
           border-radius: ($px - 490);
-          margin-bottom: ($px - 500);
-          font-size: ($txtg - .5);
-          height: ($px - 475);
+          border: none;
           box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+          -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
           background-color: map-get($map: $bg, $key: 'white');
 
           &:hover {
-            background-color: map-get($map: $bg, $key: 'blue');
+            background-color: map-get($map: $color, $key: 'blue');
             transition: 300ms;
           }
 
           span {
-            margin: ($px - 475);
+            display: block;
+            font-size: ($txtg - .4);
+            text-align: center;
 
             &:hover {
-              color: map-get($map: $bg, $key: 'white');
+              color: map-get($map: $color, $key: 'white');
               transition: 300ms;
             }
           }
@@ -405,14 +403,13 @@
 
       .form__pf {
         width: $ptj;
-        @include flex (center, none);
+        @include flex (center, center);
         margin-block: ($px - 490);
 
         .form__perfil {
           width: ($ptj - 70);
           padding-block: ($px - 495);
-          @include flex-column (column, none);
-          align-self: center;
+          @include flex-column (column, center);
           overflow: hidden;
 
           .form__img {
@@ -422,8 +419,7 @@
 
           .form__perfil2 {
             width: ($ptj - 30);
-            align-self: center;
-            @include flex-column (column, none);
+            @include flex-column (column, center);
             justify-content: center;
             color: map-get($map: $color, $key: 'white');
             font-weight: 400;
@@ -431,7 +427,7 @@
 
             label {
               text-align: justify;
-              font-size: ($txtg - .5);
+              font-size: ($txtg - .4);
               margin-bottom: ($px - 495);
             }
 
@@ -442,6 +438,7 @@
               margin-bottom: ($px - 490);
               border-radius: ($px - 495);
               box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+              -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
             }
 
             .form__checkbox {
@@ -453,6 +450,7 @@
                 margin-bottom: ($px - $px);
                 border-radius: ($px - 495);
                 box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+                -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
                 margin-right: ($px - 495);
               }
 
@@ -460,26 +458,6 @@
                 margin-bottom: ($px - $px);
               }
             }
-          }
-        }
-      }
-    }
-
-    .ctc__redes {
-      width: $ptj;
-      @include flex(space-between, none);
-      margin-block: ($px - 490);
-      overflow-x: hidden;
-
-      .ctc__redes2 {
-        width: ($ptj - 50);
-
-        a {
-          text-decoration: none;
-          margin-inline: ($px - 480);
-
-          img {
-            width: ($px - 470);
           }
         }
       }
@@ -498,7 +476,7 @@
     @media (max-width: 768px) {
       .section__ctc {
         width: $ptj;
-        @include flex-column(column, none);
+        @include flex-column(column, center);
         justify-content: center;
         padding: ($px - 490);
 
@@ -565,7 +543,7 @@
           padding: ($px - 495);
 
           .form__ctc2 {
-            @include flex-column(column, none);
+            @include flex-column(column, center);
 
             .form__ctc3 {
               width: $ptj;
@@ -617,13 +595,12 @@
   }
 
   .bg__main {
-    @include flex-column(column, none);
+    @include flex-column(column, center);
     width: $ptj;
 
     //nav secundaria
     .section__index {
-      @include flex-column(column, none);
-      align-self: center;
+      @include flex-column(column, center);
       padding: ($px - 490);
       width: $ptj;
 
@@ -667,177 +644,175 @@
 
     .container__carrousel {
       width: ($ptj - 10);
-      display: flex;
-      align-self: center;
+      @include flex(center, center);
 
       .carousel-item div {
         text-align: center;
       }
+    }
 
+    .card {
+      @include flex-column(row, center);
+      background-color: map-get($map: $bg, $key: 'black-trans');
+      border-radius: ($px - 490);
+      border: map-get($map: $color, $key: 'gy') solid ($px - 499.90);
+
+      .card__div {
+        width: ($ptj - 40);
+
+        img {
+          width: $ptj;
+          border-radius: ($px - 490) ($px - 500) ($px - 500) ($px - 490);
+
+          &:hover {
+            transform: scale(0.995, 0.995);
+            transition: 500ms;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .card-body {
+        padding: ($px - 465);
+        width: ($ptj - 60);
+        @include flex-column(column, center);
+        justify-content: center;
+
+        a {
+          color: map-get($map: $color, $key: 'white');
+          font-size: $txtg;
+          text-decoration: none;
+          text-align: justify;
+
+          &:hover {
+            color: map-get($map: $color, $key: 'gy');
+            font-weight: 500;
+            transition-delay: 150ms;
+          }
+        }
+
+        h3 {
+          color: map-get($map: $color, $key: 'white');
+          text-align: justify;
+          margin-bottom: ($px - 490);
+
+          &:hover {
+            color: map-get($map: $color, $key: 'gy');
+            font-weight: 500;
+            transition-delay: 150ms;
+          }
+        }
+      }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      width: ($ptj - 95);
+    }
+
+    @media (max-width: 1170px) {
+      .card .card-body a {
+        font-size: ($txtg - .2);
+      }
+
+      .card .card-body h3 {
+        font-size: $txtg;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .card .card__div {
+        width: ($ptj - 40);
+      }
+
+      .card .card-body {
+        padding: ($px - 470);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .card .card-body a {
+        font-size: ($txtg - .4);
+      }
+
+      .card .card-body h3 {
+        font-size: ($txtg - .2);
+      }
+    }
+
+    @media (max-width: 785px) {
+      .card .card-body {
+        padding: ($px - 500);
+        padding-inline: ($px - 480);
+      }
+    }
+
+    @media (max-width: 768px) {
       .card {
-        @include flex-column(row, none);
-        background-color: map-get($map: $bg, $key: 'black-trans');
-        border-radius: ($px - 490);
-        border: map-get($map: $color, $key: 'gy') solid ($px - 499.90);
+        @include flex-column(column, center);
 
         .card__div {
-          width: ($ptj - 40);
+          width: $ptj;
 
           img {
             width: $ptj;
-            border-radius: ($px - 490) ($px - 500) ($px - 500) ($px - 490);
-
-            &:hover {
-              transform: scale(0.995, 0.995);
-              transition: 500ms;
-              cursor: pointer;
-            }
+            border-radius: ($px - 490);
           }
         }
 
         .card-body {
-          padding: ($px - 465);
-          width: ($ptj - 60);
-          @include flex-column(column, none);
-          justify-content: center;
+          padding: ($px - 495);
+          width: $ptj;
+          height: ($px - 380);
 
           a {
-            color: map-get($map: $color, $key: 'white');
-            font-size: $txtg;
-            text-decoration: none;
-            text-align: justify;
-
-            &:hover {
-              color: map-get($map: $color, $key: 'gy');
-              font-weight: 500;
-              transition-delay: 150ms;
-            }
+            font-size: ($txtg - .4);
           }
 
           h3 {
-            color: map-get($map: $color, $key: 'white');
-            text-align: justify;
-            margin-bottom: ($px - 490);
-
-            &:hover {
-              color: map-get($map: $color, $key: 'gy');
-              font-weight: 500;
-              transition-delay: 150ms;
-            }
+            font-size: ($txtg - .2);
           }
         }
       }
+    }
+
+    @media (max-width: 585px) {
 
       .carousel-control-next,
       .carousel-control-prev {
-        width: ($ptj - 95);
+        height: ($ptj - 30);
       }
+    }
 
-      @media (max-width: 1170px) {
-        .card .card-body a {
-          font-size: ($txtg - .2);
-        }
-
-        .card .card-body h3 {
-          font-size: $txtg;
-        }
-      }
-
-      @media (max-width: 991px) {
-        .card .card__div {
-          width: ($ptj - 40);
-        }
-
-        .card .card-body {
-          padding: ($px - 470);
-        }
-      }
-
-      @media (max-width: 850px) {
-        .card .card-body a {
-          font-size: ($txtg - .4);
-        }
-
-        .card .card-body h3 {
-          font-size: ($txtg - .2);
-        }
-      }
-
-      @media (max-width: 785px) {
-        .card .card-body {
-          padding: ($px - 500);
-          padding-inline: ($px - 480);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .card {
-          @include flex-column(column, none);
-          align-self: center;
-
-          .card__div {
-            width: $ptj;
-
-            img {
-              width: $ptj;
-              border-radius: ($px - 490);
-            }
+    @media (max-width: 430px) {
+      .card {
+        .card-body {
+          a {
+            font-size: ($txtg - .6);
           }
 
-          .card-body {
-            padding: ($px - 495);
-            width: $ptj;
-            height: ($px - 380);
-
-            a {
-              font-size: ($txtg - .4);
-            }
-
-            h3 {
-              font-size: ($txtg - .2);
-            }
+          h3 {
+            font-size: ($txtg - .4);
           }
         }
       }
+    }
 
-      @media (max-width: 585px) {
-
-        .carousel-control-next,
-        .carousel-control-prev {
-          height: ($ptj - 30);
-        }
+    @media (max-width: 400px) {
+      .card .card-body {
+        height: ($px - 400);
       }
+    }
 
-      @media (max-width: 430px) {
-        .card {
-          .card-body {
-            a {
-              font-size: ($txtg - .6);
-            }
-
-            h3 {
-              font-size: ($txtg - .4);
-            }
+    @media (max-width: 330px) {
+      .card {
+        .card-body {
+          a {
+            font-size: ($txtg - .8);
           }
-        }
-      }
 
-      @media (max-width: 400px) {
-        .card .card-body {
-          height: ($px - 400);
-        }
-      }
-
-      @media (max-width: 330px) {
-        .card {
-          .card-body {
-            a {
-              font-size: ($txtg - .8);
-            }
-
-            h3 {
-              font-size: ($txtg - .6);
-            }
+          h3 {
+            font-size: ($txtg - .6);
           }
         }
       }
@@ -846,13 +821,13 @@
     .container__2 {
       margin-top: ($px - 490);
       width: ($ptj - 10);
-      @include flex(space-between, none);
-      align-self: center;
+      @include flex(space-between, center);
 
       .div__ner {
-        @include flex(space-between, none);
+        @include flex(space-between, center);
         flex-flow: row;
         width: ($ptj - 52);
+        margin-bottom: auto;
 
         .div__cont {
           width: ($ptj - 55);
@@ -917,7 +892,7 @@
       }
 
       @media (max-width: 991px) {
-        @include flex-column(column, none);
+        @include flex-column(column, center);
 
         .div__ner {
           width: $ptj;
@@ -956,13 +931,13 @@
       }
 
       @media (max-width: 585px) {
-        @include flex-column(column, none);
+        @include flex-column(column, center);
 
         .div__ner {
-          @include flex-column(column, none);
+          @include flex-column(column, center);
 
           .div__cont {
-            @include flex(space-between, none);
+            @include flex(space-between, center);
             width: $ptj;
             padding-block: ($px - 490);
             border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
@@ -1000,7 +975,7 @@
       @media (max-width: 435px) {
         .div__ner {
           .div__cont {
-            @include flex-column(column, none);
+            @include flex-column(column, center);
             width: $ptj;
             padding-block: ($px - 490);
             border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
@@ -1055,9 +1030,616 @@
           }
         }
       }
+    }
 
+    .card__section {
+      @include flex-column(row, center);
+      justify-content: space-between;
+      width: ($ptj - 10);
+
+      .card {
+        width: ($ptj - 52);
+        @include flex-column(column, center);
+
+        .card__div {
+          width: $ptj;
+
+          img {
+            width: $ptj;
+            border-radius: ($px - 490);
+          }
+        }
+
+        .card-body {
+          width: $ptj;
+          min-height: ($px - 330);
+          max-height: ($px - 330);
+          padding: ($px - 485);
+        }
+      }
+
+      @media (max-width: 771px) {
+        @include flex-column(column, center);
+
+        .card {
+          width: $ptj;
+          @include flex-column(row, center);
+          margin-block: ($px - 495);
+
+          .card__div {
+            width: ($ptj - 50);
+
+            img {
+              width: $ptj;
+            }
+          }
+
+          .card-body {
+            width: ($ptj - 55);
+            padding: ($px - 495);
+            min-height: ($px - $px);
+
+            a {
+              font-size: ($txtg - .5);
+            }
+          }
+        }
+      }
+
+      @media (max-width: 585px) {
+
+        .card {
+          @include flex-column(column, center);
+          margin-block: ($px - 490);
+
+          .card__div {
+            width: $ptj;
+
+            img {
+              width: $ptj;
+            }
+          }
+
+          .card-body {
+            width: $ptj;
+            padding: ($px - 495);
+            min-height: ($px - 330);
+
+            a {
+              font-size: ($txtg - .5);
+            }
+          }
+        }
+      }
+
+      @media (max-width: 480px) {
+        .card {
+          .card-body {
+            min-height: ($px - 380);
+            max-height: ($px - 380);
+          }
+        }
+      }
+
+      @media (max-width: 380px) {
+        .card {
+
+          .card-body {
+            min-height: ($px - 400);
+            max-height: ($px - 400);
+
+            a {
+              font-size: ($txtg - .8);
+            }
+          }
+        }
+      }
+
+      @media (max-width: 280px) {
+        .card {
+          .card-body {
+            a {
+              font-size: ($txtg - .9);
+            }
+          }
+        }
+      }
+    }
+
+    .container__section {
+      .div__ner {
+        @include flex(space-between, center);
+        flex-flow: row;
+        width: $ptj;
+        margin-bottom: auto;
+
+        .div__cont {
+          width: ($ptj - 70);
+
+          .div__img {
+            max-width: $ptj;
+
+            iframe {
+              width: $ptj;
+              height: ($px - 185);
+              border-radius: ($px - 490);
+              border: map-get($map: $color, $key: 'gy') solid ($px - 499.90);
+            }
+          }
+
+          .a {
+            margin-top: ($px - 492);
+            width: auto;
+
+            span {
+              color: map-get($map: $color, $key: 'white');
+              font-size: ($txtg - .8);
+              line-height: auto;
+              width: $ptj;
+            }
+
+            p {
+              color: map-get($map: $color, $key: 'gy');
+              font-size: ($txtg - .2);
+              line-height: auto;
+              width: $ptj;
+            }
+
+            @supports ((-webkit-hyphens:auto) or (hyphens:auto)) {
+              text-align: justify;
+              -webkit-hyphens: auto;
+              hyphens: auto;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 991px) {
+        @include flex-column(column, center);
+
+        .div__ner {
+          @include flex-column(column, center);
+
+          .div__cont {
+            @include flex(space-between, center);
+            width: $ptj;
+            padding-block: ($px - 490);
+            border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
+
+            .div__img {
+              max-width: ($ptj - 50);
+            }
+
+            .a {
+              width: ($ptj - 55);
+              margin-inline: ($px - 495);
+              margin-top: ($px - 500);
+              align-self: center;
+            }
+          }
+
+          .div__iframe {
+            @include flex-column(column, center);
+
+            .div__img {
+              max-width: $ptj;
+
+              iframe {
+                width: $ptj;
+                height: ($px - 2);
+              }
+            }
+
+            .a {
+              width: $ptj;
+              @include flex-column(column, center);
+
+              span {
+                text-align: center;
+              }
+
+              p {
+                text-align: center;
+                font-size: ($txtg - .2);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 768px) {
+
+        .div__ner {
+          .div__cont {
+
+            .a {
+              a {
+                font-size: ($txtg - .5);
+              }
+            }
+          }
+
+          .div__iframe {
+
+            .div__img {
+
+              iframe {
+                height: ($px - 121);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 585px) {
+        .div__ner {
+          .div__iframe {
+
+            .div__img {
+
+              iframe {
+                height: ($px - 215);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 480px) {
+        .div__ner {
+          .div__cont {
+            @include flex-column(column, center);
+            width: $ptj;
+            padding-block: ($px - 490);
+            border-bottom: map-get($map: $color, $key: 'white-trans') ($px - 499.99) solid;
+
+            .div__img {
+              max-width: $ptj;
+            }
+
+            .a {
+              width: $ptj;
+
+              a {
+                font-size: $txtg;
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 380px) {
+        .div__ner {
+          .div__iframe {
+            .div__img {
+              iframe {
+                height: ($px - 338);
+              }
+            }
+
+            .a {
+              span {
+                font-size: ($txtg - 1);
+              }
+
+              p {
+                font-size: ($txtg - .5);
+              }
+            }
+          }
+
+          .div__cont {
+            .a {
+              a {
+                font-size: ($txtg - .5);
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 280px) {
+        .div__ner {
+          .div__iframe {
+            .a {
+              span {
+                font-size: ($txtg - 1);
+              }
+
+              p {
+                font-size: ($txtg - .8);
+              }
+            }
+          }
+
+          .div__cont {
+            .a {
+              a {
+                font-size: ($txtg - .8);
+              }
+            }
+          }
+        }
+      }
     }
   }
+
+
+  .ctc__redes {
+    width: $ptj;
+    @include flex(space-evenly, center);
+    margin-block: ($px - 490);
+    overflow-x: hidden;
+
+    .ctc__redes2 {
+      width: auto;
+
+      a {
+        text-decoration: none;
+        margin-inline: ($px - 480);
+
+        img {
+          width: ($px - 470);
+        }
+      }
+    }
+  }
+
+  .error {
+    @include flex-column(column, center);
+    width: ($ptj - 40);
+    min-height: $hv;
+
+    h2 {
+      font-family: $titlefonts;
+      color: map-get($map: $color, $key: 'white');
+      font-size: $txth2;
+      width: auto;
+      align-self: center;
+      margin-top: auto;
+      margin-bottom: ($px - 485);
+    }
+
+    article {
+      @include flex(space-between, center);
+      flex-flow: wrap;
+      margin-bottom: auto;
+
+      .img__error {
+        width: ($ptj - 50);
+        margin-block: auto;
+
+        img {
+          width: $ptj;
+        }
+      }
+
+      .txt__error {
+        width: ($ptj - 50);
+        @include flex-column(column, center);
+        justify-content: center;
+
+        @supports ((-webkit-hyphens:auto) or (hyphens:auto)) {
+          text-align: justify;
+          -webkit-hyphens: auto;
+          hyphens: auto;
+        }
+
+        h3 {
+          font-family: $titlefonts;
+          color: map-get($map: $color, $key: 'white');
+          font-size: ($txtg + .2);
+        }
+
+        p {
+          color: map-get($map: $color, $key: 'white');
+        }
+
+        .button__error {
+          width: $ptj;
+          @include flex(center, center);
+
+          a {
+            width: auto;
+
+            button {
+              width: ($px - 300);
+              height: ($px - 470);
+              border-radius: ($px - 490);
+              border: none;
+              box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'blue');
+              -webkit-box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'blue');
+
+              &:hover {
+                background-color: map-get($map: $color, $key: 'blue');
+                box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'white');
+                -webkit-box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'white');
+                transition: 300ms;
+              }
+
+              span {
+                display: block;
+                font-family: $titlefonts;
+                font-size: ($txtg - .5);
+                text-align: center;
+
+                &:hover {
+                  color: map-get($map: $color, $key: 'white');
+                  transition: 300ms;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1111px) {
+      width: ($ptj - 30);
+    }
+
+    @media (max-width: 991px) {
+      width: ($ptj - 20);
+
+      article {
+        .img__error {
+          width: ($ptj - 30);
+          margin-inline: auto;
+          margin-block: ($px - 480);
+        }
+
+        .txt__error {
+          width: ($ptj - 40);
+          margin-inline: auto;
+          margin-block: ($px - 480);
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: $ptj;
+
+      article {
+        .img__error {
+          width: ($ptj - 20);
+        }
+
+        .txt__error {
+          width: ($ptj - 30);
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+      width: $ptj;
+
+      article {
+        .img__error {
+          width: $ptj;
+        }
+
+        .txt__error {
+          width: $ptj - 10;
+        }
+
+        .ctc__redes {
+          margin-block: ($px - 495);
+
+          .ctc__redes2 {
+            a {
+              margin-inline: ($px - 490);
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 380px) {
+      h2 {
+        font-size: ($txth2 - .5);
+      }
+
+      article {
+        .img__error {
+          width: $ptj;
+        }
+
+        .txt__error {
+          width: $ptj - 10;
+
+          h3 {
+            font-size: $txtg;
+          }
+
+          p {
+            font-size: ($txtg - .2);
+          }
+        }
+
+        .ctc__redes {
+          .ctc__redes2 {
+            a {
+              margin-inline: ($px - 495);
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 340px) {
+      article {
+        .txt__error {
+          h3 {
+            font-size: ($txtg - .4);
+          }
+
+          p {
+            font-size: ($txtg - .6);
+          }
+
+          .button__error {
+            a {
+              button {
+                height: ($px - 475);
+
+                span {
+                  font-size: ($txtg - .6);
+                }
+              }
+            }
+          }
+        }
+
+        .ctc__redes {
+          .ctc__redes2 {
+            a {
+              img {
+                width: ($px - 475);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 270px) {
+      article {
+        .txt__error {
+          h2 {
+            font-size: ($txtg - .6);
+          }
+
+          p {
+            font-size: ($txtg - .8);
+          }
+
+          .button__error {
+            a {
+              button {
+                height: ($px - 475);
+
+                span {
+                  font-size: ($txtg - .8);
+                }
+              }
+            }
+          }
+        }
+
+        .ctc__redes {
+          .ctc__redes2 {
+            a {
+              img {
+                width: ($px - 480);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
 
   .section__index-w {
     @extend .section__index;
@@ -1088,7 +1670,7 @@
   }
 
   .section__rsl {
-    @include flex-column(column, none);
+    @include flex-column(column, center);
     padding: ($px - 490);
     margin-bottom: ($px - 490);
     width: $ptj;
@@ -1172,24 +1754,26 @@
   .rsl__div {
     width: ($ptj - 20);
     align-self: center;
-    @include flex (space-evenly, none);
+    @include flex (space-evenly, center);
     background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-header-1'), map-get($map:$bg, $key:'green-header-2'));
     box-shadow: ($px - 498) ($px - 498) map-get($map: $color, $key: 'green-shadow');
+    -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'green-shadow');
     border-radius: ($px - 480);
 
     .rsl__div2 {
-      @include flex-column (column, none);
+      @include flex-column (column, center);
       width: ($ptj - 70);
       padding: ($px - 490);
       margin-block: ($px - 490);
       background: linear-gradient(to bottom, map-get($map:$bg, $key:'green-rsl-1'), map-get($map:$bg, $key:'green-rsl-2'));
       border-radius: ($px - 480);
       box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
+      -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'black');
 
       .rsl__div3 {
         @include flex(space-between, center);
         width: ($ptj - 20);
-        align-self: center;
+        align-items: center;
         overflow: hidden;
         margin-block: ($px - 495);
 
@@ -1216,7 +1800,7 @@
 
     @media (max-width: 768px) {
       width: ($ptj - 50);
-      @include flex-column (column, none);
+      @include flex-column (column, center);
 
       .rsl__div2 {
         width: ($ptj - 10);
@@ -1252,8 +1836,7 @@
 
 
   .section__about-br {
-    @include flex-column(column, none);
-    align-self: center;
+    @include flex-column(column, center);
     margin-block: ($px - 480);
     padding: ($px - 490);
     width: $ptj;
@@ -1270,14 +1853,14 @@
 
     .container__4 {
       width: ($ptj - 20);
-      @include flex(space-between, none);
-      align-self: center;
+      @include flex(space-between, center);
 
       div {
         width: ($ptj - 55);
         display: flex;
         border-radius: ($px - 480);
         box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'gy');
+        -webkit-box-shadow: ($px - 497) ($px - 497) map-get($map: $color, $key: 'gy');
       }
 
       img {
@@ -1357,9 +1940,8 @@
       }
 
       .container__4 {
-        @include flex-column(column, none);
+        @include flex-column(column, center);
         justify-content: center;
-        align-self: center;
         width: $ptj;
 
         div {
@@ -1433,7 +2015,7 @@
 
   // footer general
   .footer {
-    @include flex(space-evenly, none);
+    @include flex(space-evenly, center);
     margin-top: auto;
     bottom: ($px - 500);
     padding-top: ($px - 490);
@@ -1459,8 +2041,7 @@
 
       .div__span {
         width: $ptj;
-        @include flex-column(column, none);
-        align-self: center;
+        @include flex-column(column, center);
 
         span {
           font-size: ($txth2 + .5);
@@ -1469,6 +2050,7 @@
           color: map-get($map: $color, $key: 'green-shadow');
           font-family: $titlefonts;
           text-shadow: ($px - 499) ($px - 499) map-get($map: $color, $key: 'gy');
+          -webkit-text-shadow: ($px - 499) ($px - 499) map-get($map: $color, $key: 'gy');
         }
 
         .span_ {
@@ -1481,6 +2063,8 @@
         font-style: normal;
         color: map-get($map: $color, $key: 'gy');
         margin-block: ($px - 490);
+        max-width: ($px - 350);
+        margin-inline: auto;
       }
     }
 
@@ -1584,7 +2168,7 @@
       }
 
       .footer__addrs {
-        @include flex-column(column, none);
+        @include flex-column(column, center);
         justify-content: center;
         grid-area: addrs;
         width: $ptj;
@@ -1602,7 +2186,7 @@
         border-right: none;
 
         .div__redes {
-          @include flex(center, none);
+          @include flex(center, center);
           width: auto;
           margin-bottom: ($px - 500);
 
@@ -1702,7 +2286,7 @@
     }
 
     @media (max-width: 585px) {
-      @include flex-column(column, none);
+      @include flex-column(column, center);
 
       h4 {
         width: auto;
@@ -1723,7 +2307,7 @@
 
       .footer__redes {
         width: auto;
-        @include flex(space-between, none);
+        @include flex(space-between, center);
         border: none;
 
         h4 {

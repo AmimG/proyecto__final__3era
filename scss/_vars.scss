@@ -38,13 +38,13 @@ a {
 @mixin flex($justify, $align) {
   display: flex;
   justify-content: $justify;
-  align-items: $align;
+  align-self: $align;
 }
 
 @mixin flex-column($direction, $align) {
   display: flex;
   flex-direction: $direction;
-  align-items: $align;
+  align-self: $align;
 }
 
 // mg
