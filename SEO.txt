@@ -28,3 +28,31 @@ Contacto
 - Meta keywords: se agregarón las siguientes palabras claves "contacto, correo, gmail, outlook, quejas, bugs"
 - Title: Contacto | Central Sports
 
+Tenis
+- Meta description: se agregó el siguiente parrafo "Sección de Tenis de Central Sports, en esta damos la información más relevante del Tenis. Noticias sobre Djokovic, Nadal, Federer, los torneos de ATP 250, ATP 500, ATP 100, Grand Slams y más"
+- Meta keywords: se agregarón las siguientes palabras claves "deportes, diario, diario deportivo, digital, diario digital, tenis, nadal, federer, djkovic, roland garros, us open, wimbledon, australia open"
+- Title: Tenis | Central Sports
+
+Fútbol
+- Meta description: se agregó el siguiente parrafo "Contacta con Central Sports, envianos rumores, estadisticas, noticias. Contacto por trabajo, mejoras, bugs"
+- Meta keywords: se agregarón las siguientes palabras claves "contacto, correo, gmail, outlook, quejas, bugs"
+- Title: Contacto | Central Sports
+
+Boxeo
+- Meta description: se agregó el siguiente parrafo "Sección de Boxeo de Central Sports, en esta damos la información más relevante del boxeo. Noticias de Canelos Alvarez, Maywhether, Pacquiao, fury, Foreman, boxeo femenino, peso ligero, peso pluma, peso mosca, peso gallo, peso welter, peso medio, peso pesado"
+- Meta keywords: se agregarón las siguientes palabras claves "deportes, diario, diario deportivo, digital, diario digital, boxeo, maywhether, canelo, Golovkin, golovkin, boxeo femenino, ali, paquiao, ryan"
+- Title: Boxeo | Central Sport
+
+Error 404
+- Meta description: se agregó el siguiente parrafo "Pagina de Error para links o paginas que no existen o, no están terminadas"
+- Meta keywords: se agregarón las siguientes palabras claves "error, error 404"
+- Title: Error 404 | Central Sports
+
+Novak Djokovic Wimbledon
+- Meta description: se agregó el siguiente parrafo "Novak Djokovic y una epicidad más en su torneo preferido el Grand Slam de Wimbledon"
+- Meta keywords: se agregarón las siguientes palabras claves "deportes, diario, diario deportivo, digital, diario digital, tenis, novak, djkovic, wimbledon"
+- Title: Novak Djokovic y una epicidad en Wimbledon | Central Sports
+
+
+
+
